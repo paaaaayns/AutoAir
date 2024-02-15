@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "889223976804",
+    "project_id": "auto-air-57c40",
+    "storage_bucket": "auto-air-57c40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889223976804:android:e8a47bd655b79585130c71",
+        "android_client_info": {
+          "package_name": "com.example.autoair"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQHQTT2ILA-EsDu5xU6oRqlDH-mVpOXLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889223976804:android:cd523f40fa1c881c130c71",
+        "android_client_info": {
+          "package_name": "com.example.homeautomation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQHQTT2ILA-EsDu5xU6oRqlDH-mVpOXLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
