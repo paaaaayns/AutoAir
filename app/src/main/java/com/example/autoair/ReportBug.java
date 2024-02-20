@@ -14,53 +14,13 @@ public class ReportBug extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report_bug);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // Toolbar
         View toolbar = findViewById(R.id.toolbar);
-        TextView tvTitle = toolbar.findViewById(R.id.tv_Title);
+        TextView tvTitle = toolbar.findViewById(R.id.tvTitle);
         tvTitle.setText("Report a Bug");
 
         ImageView icon1 = toolbar.findViewById(R.id.icon1);
-        icon1.setImageResource(R.drawable.ic_back);
+        icon1.setImageResource(R.drawable.ic_chevron_left);
 
 
         ImageView icon2 = toolbar.findViewById(R.id.icon2);

@@ -76,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
         if (user != null) {
             Intent intent = new Intent(MainActivity.this, HomePage.class);
             startActivity(intent);
-            finish();
         }
 
 

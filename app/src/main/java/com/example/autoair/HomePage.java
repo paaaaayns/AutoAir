@@ -14,15 +14,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class HomePage extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
 
     LinearLayout layoutDashboard, layoutAppearance, layoutReportBug, layoutSettings, layoutLogout;
-
-
 
 
     @Override
@@ -39,9 +36,33 @@ public class HomePage extends AppCompatActivity {
         layoutLogout = findViewById(R.id.layoutLogout);
 
 
+
+
+        View card_appliances = findViewById(R.id.card_appliances);
+        card_appliances.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(ApplianceControls.class);
+            }
+        });
+
+        View card_rooms = findViewById(R.id.card_rooms);
+        card_rooms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(RoomStatusPage.class);
+            }
+        });
+
+
+
+
+
+
+
         // Toolbar
         View toolbar = findViewById(R.id.toolbar);
-        TextView tvTitle = toolbar.findViewById(R.id.tv_Title);
+        TextView tvTitle = toolbar.findViewById(R.id.tvTitle);
         tvTitle.setText("Auto Air");
 
         ImageView icon1 = toolbar.findViewById(R.id.icon1);
@@ -74,7 +95,7 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 closeDrawer(drawerLayout);
-                redirectActivity(HomePage.this, ReportBug.class);
+                redirectActivity(ReportBug.class);
             }
         });
 
@@ -112,9 +133,9 @@ public class HomePage extends AppCompatActivity {
     }
 
     // REDIRECT ON NAVIGATION DRAWER CLICK
-    public static void redirectActivity(Activity activity, Class secondActivity) {
-        Intent intent = new Intent(activity, secondActivity);
-        activity.startActivity(intent);
+    public void redirectActivity(Class secondActivity) {
+        Intent intent = new Intent(getApplicationContext(), secondActivity);
+        startActivity(intent);
     }
 
     @Override
@@ -128,7 +149,7 @@ public class HomePage extends AppCompatActivity {
         super.onBackPressed();
         FirebaseAuth.getInstance().signOut();
         Toast.makeText(HomePage.this, "Account signed out.", Toast.LENGTH_SHORT).show();
+        redirectActivity(MainActivity.class);
         finish();
-        redirectActivity(HomePage.this, MainActivity.class);
     }
 }

@@ -20,5 +20,8 @@
 
     </style>
 
+    <style name="MySwitch" parent="Widget.AppCompat.CompoundButton.Switch">
+    </style>
+
 
 </resources>

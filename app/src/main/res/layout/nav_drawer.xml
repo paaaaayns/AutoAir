@@ -69,8 +69,8 @@
                         app:cardCornerRadius="8dp">
 
                         <ImageView
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
                             android:layout_margin="8dp"
                             android:src="@drawable/ic_home"
                             app:tint="@color/white" />
@@ -113,8 +113,8 @@
                         app:cardCornerRadius="8dp">
 
                         <ImageView
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
                             android:layout_margin="8dp"
                             android:src="@drawable/ic_appearance"
                             app:tint="@color/white" />
@@ -157,8 +157,8 @@
                         app:cardCornerRadius="8dp">
 
                         <ImageView
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
                             android:layout_margin="8dp"
                             android:src="@drawable/ic_bug"
                             app:tint="@color/white" />
@@ -204,8 +204,8 @@
                         app:cardCornerRadius="8dp">
 
                         <ImageView
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
                             android:layout_margin="8dp"
                             android:src="@drawable/ic_settings"
                             app:tint="@color/white" />
@@ -265,8 +265,8 @@
                     app:cardCornerRadius="8dp">
 
                     <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:layout_margin="8dp"
                         android:src="@drawable/ic_logout"
                         app:tint="@color/white" />
