@@ -130,6 +130,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#E7E7E7"
+
+                    android:fontFamily="@font/quicksand_bold"
                     android:text="Cancel"
                     android:textAllCaps="false"
                     android:textColor="@color/primary"
@@ -140,6 +142,9 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
+
+                    android:fontFamily="@font/quicksand_bold"
                     android:text="Submit"
                     android:textAllCaps="false"
                     android:textColor="@color/white"

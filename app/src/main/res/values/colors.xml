@@ -13,6 +13,7 @@
     <color name="secondary">#FED500</color>
     <color name="grayText">#53534F</color>
     <color name="graySubText">#666666</color>
+    <color name="grayElements">#666666</color>
     <color name="bg">#F5F5F5</color>
 
 
