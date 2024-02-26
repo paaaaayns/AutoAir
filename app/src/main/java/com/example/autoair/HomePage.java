@@ -1,14 +1,14 @@
 package com.example.autoair;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,40 +21,15 @@ public class HomePage extends AppCompatActivity {
 
     LinearLayout layoutDashboard, layoutAppearance, layoutReportBug, layoutSettings, layoutLogout;
 
+    CardView cardAddAppliance, cardAddRoom;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-
-
-        drawerLayout = findViewById(R.id.drawerLayout);
-        layoutDashboard = findViewById(R.id.layoutDashboard);
-        layoutAppearance = findViewById(R.id.layoutAppearance);
-        layoutReportBug = findViewById(R.id.layoutReportBug);
-        layoutSettings = findViewById(R.id.layoutSettings);
-        layoutLogout = findViewById(R.id.layoutLogout);
-
-
-
-
-        View card_appliances = findViewById(R.id.card_appliances);
-        card_appliances.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                redirectActivity(ApplianceControls.class);
-            }
-        });
-
-        View card_rooms = findViewById(R.id.card_rooms);
-        card_rooms.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                redirectActivity(RoomStatusPage.class);
-            }
-        });
-
-
 
 
 
@@ -65,12 +40,19 @@ public class HomePage extends AppCompatActivity {
         TextView tvTitle = toolbar.findViewById(R.id.tvTitle);
         tvTitle.setText("Auto Air");
 
-        ImageView icon1 = toolbar.findViewById(R.id.icon1);
+        ImageButton icon1 = toolbar.findViewById(R.id.icon1);
         icon1.setImageResource(R.drawable.ic_menu);
 
-        ImageView icon2 = toolbar.findViewById(R.id.icon2);
+        ImageButton icon2 = toolbar.findViewById(R.id.icon2);
         icon2.setImageResource(R.drawable.ic_notification);
 
+
+        drawerLayout = findViewById(R.id.drawerLayout);
+        layoutDashboard = findViewById(R.id.layoutDashboard);
+        layoutAppearance = findViewById(R.id.layoutAppearance);
+        layoutReportBug = findViewById(R.id.layoutReportBug);
+        layoutSettings = findViewById(R.id.layoutSettings);
+        layoutLogout = findViewById(R.id.layoutLogout);
 
         // Open Navigation Drawer
         icon1.setOnClickListener(new View.OnClickListener() {
@@ -110,6 +92,57 @@ public class HomePage extends AppCompatActivity {
                 finish();
             }
         });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        View card_appliances = findViewById(R.id.card_appliances);
+        card_appliances.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(ApplianceControls.class);
+            }
+        });
+
+        View card_rooms = findViewById(R.id.card_rooms);
+        card_rooms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(RoomStatusPage.class);
+            }
+        });
+
+
+
+        cardAddAppliance = findViewById(R.id.cardAddAppliance);
+        cardAddAppliance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(AddAppliancePage.class);
+            }
+        });
+
+
+        cardAddRoom = findViewById(R.id.cardAddRoom);
+
+
+
+
+
+
+
+
+
 
 
 

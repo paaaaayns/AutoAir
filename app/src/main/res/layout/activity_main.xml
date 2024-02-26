@@ -55,7 +55,7 @@
                             android:textColorHint="@color/black"
                             >
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/edtEmail"
+                                android:id="@+id/edtUsername"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:paddingVertical="15dp"

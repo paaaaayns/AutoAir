@@ -54,7 +54,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+
+            >
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -63,7 +65,9 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="8dp"
                 android:layout_weight="1"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                android:backgroundTint="@color/primary"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -81,6 +85,7 @@
 
                         android:fontFamily="@font/quicksand_semibold"
                         android:text="Temperature"
+                        android:textColor="@color/white"
                         android:textAlignment="center"
                         android:textSize="16dp" />
 
@@ -96,11 +101,13 @@
 
                             android:fontFamily="@font/quicksand_medium"
                             android:text="Min"
+                            android:textColor="@color/white"
                             android:textAlignment="center"
                             android:textSize="16dp" />
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            app:boxBackgroundColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
 
@@ -133,11 +140,13 @@
 
                             android:fontFamily="@font/quicksand_medium"
                             android:text="Max"
+                            android:textColor="@color/white"
                             android:textAlignment="center"
                             android:textSize="16dp" />
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            app:boxBackgroundColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
 
@@ -169,7 +178,9 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="16dp"
                 android:layout_weight="1"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                android:backgroundTint="@color/primary"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -178,7 +189,6 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
-
                     >
 
                     <TextView
@@ -188,6 +198,7 @@
 
                         android:fontFamily="@font/quicksand_semibold"
                         android:text="Humidity"
+                        android:textColor="@color/white"
                         android:textAlignment="center"
                         android:textSize="16dp" />
 
@@ -203,11 +214,13 @@
 
                             android:fontFamily="@font/quicksand_medium"
                             android:text="Min"
+                            android:textColor="@color/white"
                             android:textAlignment="center"
                             android:textSize="16dp" />
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            app:boxBackgroundColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
 
@@ -240,11 +253,13 @@
 
                             android:fontFamily="@font/quicksand_medium"
                             android:text="Max"
+                            android:textColor="@color/white"
                             android:textAlignment="center"
                             android:textSize="16dp" />
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            app:boxBackgroundColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
 
@@ -278,7 +293,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="16dp">
+        android:layout_marginVertical="16dp">
 
         <Button
             android:id="@+id/btnCancel"

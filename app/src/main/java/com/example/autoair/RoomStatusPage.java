@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,10 +29,10 @@ public class RoomStatusPage extends AppCompatActivity {
         TextView tvTitle = toolbar.findViewById(R.id.tvTitle);
         tvTitle.setText("Appliance Controls");
 
-        ImageView icon1 = toolbar.findViewById(R.id.icon1);
+        ImageButton icon1 = toolbar.findViewById(R.id.icon1);
         icon1.setImageResource(R.drawable.ic_chevron_left);
 
-        ImageView icon2 = toolbar.findViewById(R.id.icon2);
+        ImageButton icon2 = toolbar.findViewById(R.id.icon2);
         icon2.setImageResource(R.drawable.ic_notification);
 
         icon1.setOnClickListener(new View.OnClickListener() {

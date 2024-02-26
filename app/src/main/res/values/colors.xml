@@ -16,5 +16,9 @@
     <color name="grayElements">#666666</color>
     <color name="bg">#F5F5F5</color>
 
+    <color name="transparent">#00000000</color>
+
+
+
 
 </resources>
