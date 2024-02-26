@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:background="@drawable/dialog_layout"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:layout_marginVertical="16dp"
+
+            android:src="@drawable/line"
+            app:tint="@color/primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+
+            android:fontFamily="@font/quicksand_semibold"
+            android:text="Frequency"
+            android:textSize="20dp" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/line"
+            app:tint="@color/primary" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/quicksand_medium"
+            android:text="Choose the frequency of the schedule"
+            android:textColor="#666666"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            >
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_radio_selector"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="12dp"
+
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="Once"
+                    android:textSize="16dp"
+                    android:textColor="@drawable/custom_radio_text"
+
+                    android:button="@null"
+                    />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_radio_selector"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="12dp"
+
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="Daily"
+                    android:textSize="16dp"
+                    android:textColor="@drawable/custom_radio_text"
+
+                    android:button="@null"
+                    />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_radio_selector"
+
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="Weekly"
+                    android:textSize="16dp"
+                    android:textColor="@drawable/custom_radio_text"
+
+                    android:button="@null"
+                    />
+
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="16dp">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+
+            android:layout_weight="1"
+            android:backgroundTint="#E7E7E7"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/primary" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Confirm"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
