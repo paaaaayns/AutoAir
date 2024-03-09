@@ -152,7 +152,7 @@ public class ApplianceControls extends AppCompatActivity {
         tvTitle.setText("Appliance Controls");
 
         ImageButton icon1 = toolbar.findViewById(R.id.icon1);
-        icon1.setImageResource(R.drawable.ic_chevron_left);
+        icon1.setImageResource(R.drawable.ic_arrow_left);
 
         ImageButton icon2 = toolbar.findViewById(R.id.icon2);
         icon2.setImageResource(R.drawable.ic_notification);

@@ -157,13 +157,6 @@ public class HomePage extends AppCompatActivity {
 
 
 
-        View card_appliances = findViewById(R.id.card_appliances);
-        card_appliances.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                redirectActivity(ApplianceControls.class);
-            }
-        });
 
 //        View card_rooms = findViewById(R.id.card_rooms);
 //        card_rooms.setOnClickListener(new View.OnClickListener() {

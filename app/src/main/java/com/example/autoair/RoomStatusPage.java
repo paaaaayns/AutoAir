@@ -1,25 +1,20 @@
 package com.example.autoair;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -182,7 +177,7 @@ public class RoomStatusPage extends AppCompatActivity {
         tvTitle.setText(floorName);
 
         ImageButton icon1 = toolbar.findViewById(R.id.icon1);
-        icon1.setImageResource(R.drawable.ic_chevron_left);
+        icon1.setImageResource(R.drawable.ic_arrow_left);
 
         ImageButton icon2 = toolbar.findViewById(R.id.icon2);
         icon2.setImageResource(R.drawable.ic_notification);

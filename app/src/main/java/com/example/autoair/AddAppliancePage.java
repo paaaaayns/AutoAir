@@ -57,7 +57,7 @@ public class AddAppliancePage extends AppCompatActivity {
         tvTitle.setText("Add Appliances");
 
         ImageButton icon1 = toolbar.findViewById(R.id.icon1);
-        icon1.setImageResource(R.drawable.ic_chevron_left);
+        icon1.setImageResource(R.drawable.ic_arrow_left);
 
         ImageButton icon2 = toolbar.findViewById(R.id.icon2);
         icon2.setImageResource(R.drawable.ic_notification);
