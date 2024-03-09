@@ -61,15 +61,10 @@ public class RoomStatusPage extends AppCompatActivity {
                 Integer humidity = snapshot.child("humidity").getValue(Integer.class);
                 Integer power = snapshot.child("power").getValue(Integer.class);
 
-                // Convert the values to string only if they are not null
-                String temperatureString = (temperature != null) ? temperature.toString() : "N/A";
-                String humidityString = (humidity != null) ? humidity.toString() : "N/A";
-                String powerString = (power != null) ? power.toString() : "N/A";
-
                 // Set the values to your TextViews
-                tvRoomTemperature.setText(temperatureString);
-                tvRoomHumidity.setText(humidityString);
-                tvRoomPower.setText(powerString);
+                tvRoomTemperature.setText(temperature.toString() + " °C");
+                tvRoomHumidity.setText(humidity.toString() + " %");
+                tvRoomPower.setText(power.toString() + " kW");
             }
 
             @Override
