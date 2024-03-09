@@ -186,7 +186,7 @@
                         android:id="@+id/imgBtnMode"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:backgroundTint="@color/white"
+                        android:backgroundTint="@color/transparent"
                         android:src="@drawable/ic_chevron_right"
 
                         android:clickable="false"
@@ -238,7 +238,7 @@
                         android:id="@+id/imgBtnProgramDetails"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:backgroundTint="@color/white"
+                        android:backgroundTint="@color/transparent"
                         android:src="@drawable/ic_chevron_right"
 
                         android:clickable="false"
@@ -289,7 +289,7 @@
                         android:id="@+id/imgBtnFrequency"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:backgroundTint="@color/white"
+                        android:backgroundTint="@color/transparent"
                         android:src="@drawable/ic_chevron_right"
 
                         android:clickable="false"
@@ -341,7 +341,7 @@
                         android:id="@+id/imgBtnTime"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:backgroundTint="@color/white"
+                        android:backgroundTint="@color/transparent"
                         android:src="@drawable/ic_chevron_right"
 
                         android:clickable="false"

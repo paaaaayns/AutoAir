@@ -7,6 +7,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -14,6 +15,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class HomePage extends AppCompatActivity {
 
@@ -23,16 +29,60 @@ public class HomePage extends AppCompatActivity {
 
     CardView cardAddAppliance, cardAddRoom;
 
-
-
+    Intent intent;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
+        intent = new Intent(getApplicationContext(), RoomStatusPage.class);
+
+        DatabaseReference floorRef = database.getInstance().getReference("company").child("CSC").child("floors");
 
 
+        // In your activity or fragment code
+        LinearLayout mainLayout = findViewById(R.id.layoutFloorList);
+
+        // Assuming you have a DatabaseReference reference pointing to your data
+        // Iterate through the data from Firebase and inflate the item layout for each item
+        floorRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    // Get the key of the snapshot
+                    String key = snapshot.getKey().toString();
+
+                    // Get the value of the snapshot
+                    String name = snapshot.child("name").getValue(String.class);
+
+                    // Inflate the item layout
+                    View itemLayout = getLayoutInflater().inflate(R.layout.layout_floor_card, null);
+
+                    // Customize the item layout based on the data from the snapshot
+                    TextView tvTitle = itemLayout.findViewById(R.id.tvTitle);
+                    tvTitle.setText(name);
+
+                    // Add the inflated item layout to the main layout
+                    mainLayout.addView(itemLayout);
+
+                    itemLayout.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            intent.putExtra("key", key);
+                            intent.putExtra("name", name);
+                            redirectActivity(RoomStatusPage.class);
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Handle errors here
+            }
+        });
 
 
         // Toolbar
@@ -89,6 +139,7 @@ public class HomePage extends AppCompatActivity {
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
                 Toast.makeText(HomePage.this, "Account signed out.", Toast.LENGTH_SHORT).show();
+                redirectActivity(MainActivity.class);
                 finish();
             }
         });
@@ -114,26 +165,17 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
-        View card_rooms = findViewById(R.id.card_rooms);
-        card_rooms.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                redirectActivity(RoomStatusPage.class);
-            }
-        });
+//        View card_rooms = findViewById(R.id.card_rooms);
+//        card_rooms.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                redirectActivity(RoomStatusPage.class);
+//            }
+//        });
 
 
 
-        cardAddAppliance = findViewById(R.id.cardAddAppliance);
-        cardAddAppliance.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                redirectActivity(AddAppliancePage.class);
-            }
-        });
 
-
-        cardAddRoom = findViewById(R.id.cardAddRoom);
 
 
 
@@ -167,7 +209,6 @@ public class HomePage extends AppCompatActivity {
 
     // REDIRECT ON NAVIGATION DRAWER CLICK
     public void redirectActivity(Class secondActivity) {
-        Intent intent = new Intent(getApplicationContext(), secondActivity);
         startActivity(intent);
     }
 
@@ -177,12 +218,19 @@ public class HomePage extends AppCompatActivity {
         closeDrawer(drawerLayout);
     }
 
+    private boolean backPressedOnce = false;
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        FirebaseAuth.getInstance().signOut();
-        Toast.makeText(HomePage.this, "Account signed out.", Toast.LENGTH_SHORT).show();
-        redirectActivity(MainActivity.class);
-        finish();
+
+        if (backPressedOnce) {
+            super.onBackPressed();
+            finish();
+        } else {
+            this.backPressedOnce = true;
+            Toast.makeText(this, "Press back again to exit", Toast.LENGTH_SHORT).show();
+
+            // Reset the flag after a certain time period
+            new Handler().postDelayed(() -> backPressedOnce = false, 2000);
+        }
     }
 }

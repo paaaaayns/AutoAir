@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -14,10 +15,11 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import com.google.firebase.database.FirebaseDatabase;
 
 public class ApplianceControls extends AppCompatActivity {
 
@@ -29,6 +31,9 @@ public class ApplianceControls extends AppCompatActivity {
     ImageButton imgBtnMode, imgBtnProgramDetails, imgBtnFrequency, imgBtnTime;
 
 
+
+    Intent intent;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -160,10 +165,11 @@ public class ApplianceControls extends AppCompatActivity {
         });
     }
 
+    // Show Program Details drawer
     private void ShowProgramDetails(){
         final Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.ac_program_details);
+        dialog.setContentView(R.layout.dialog_ac_program_details);
         dialog.show();
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -186,13 +192,13 @@ public class ApplianceControls extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
-
     }
 
+    // Show Frequency drawer
     private void ShowFrequency(){
         final Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.ac_frequency);
+        dialog.setContentView(R.layout.dialog_ac_frequency);
         dialog.show();
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -215,13 +221,13 @@ public class ApplianceControls extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
-
     }
 
+    // Show Time drawer
     private void ShowTime(){
         final Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.ac_time);
+        dialog.setContentView(R.layout.dialog_ac_time);
         dialog.show();
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -244,6 +250,11 @@ public class ApplianceControls extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+    }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

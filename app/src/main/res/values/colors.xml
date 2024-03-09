@@ -3,11 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="primary">#0E4678</color>
-    <color name="primary2">#3C6B94</color>
-    <color name="primary3">#7190AD</color>
-    <color name="primary4">#A0B5C8</color>
-    <color name="primary5">#CFDAE3</color>
+    <color name="primary">#289DB9</color>
+    <color name="primary2">#92D7E7</color>
+    <color name="primary3">#E6F6FA</color>
 
 
     <color name="secondary">#FED500</color>
@@ -17,6 +15,9 @@
     <color name="bg">#F5F5F5</color>
 
     <color name="transparent">#00000000</color>
+
+    <color name="switchOn">#77DD77</color>
+    <color name="switchOff">#D9D9D9</color>
 
 
 

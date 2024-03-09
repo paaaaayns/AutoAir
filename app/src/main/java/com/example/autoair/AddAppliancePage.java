@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 public class AddAppliancePage extends AppCompatActivity {
 
-    String[] itemAppliance = {"Appliance 1", "Appliance 2", "Appliance 3", "Appliance 4"};
     String[] itemRoom = {"Room 1", "Room 2", "Room 3", "Room 4"};
 
 
@@ -25,20 +24,6 @@ public class AddAppliancePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_appliance_page);
 
-
-
-        autoCompleteAppliance = findViewById(R.id.autoCompleteAppliance);
-        adapterAppliance = new ArrayAdapter<String>(this, R.layout.dropdown_items, itemAppliance);
-        autoCompleteAppliance.setAdapter(adapterAppliance);
-
-        autoCompleteAppliance.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String item = parent.getItemAtPosition(position).toString();
-
-                Toast.makeText(AddAppliancePage.this, "Seleceted: " + item, Toast.LENGTH_SHORT).show();
-            }
-        });
 
         autoCompleteRoom = findViewById(R.id.autoCompleteRoom);
         adapterRoom = new ArrayAdapter<String>(this, R.layout.dropdown_items, itemRoom);
