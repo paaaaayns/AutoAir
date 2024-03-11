@@ -1,5 +1,6 @@
 package com.example.autoair;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
@@ -53,6 +54,7 @@ public class HomePage extends AppCompatActivity {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     // Get the key of the snapshot
                     String key = snapshot.getKey().toString();
+                    DatabaseReference sensorRef = floorRef.child(key).child("sensors");
 
                     // Get the value of the snapshot
                     String name = snapshot.child("name").getValue(String.class);
@@ -64,8 +66,32 @@ public class HomePage extends AppCompatActivity {
                     TextView tvTitle = itemLayout.findViewById(R.id.tvTitle);
                     tvTitle.setText(name);
 
+                    TextView tvTemperature = itemLayout.findViewById(R.id.tvTemperature);
+                    TextView tvHumidity = itemLayout.findViewById(R.id.tvHumidity);
+                    TextView tvPower = itemLayout.findViewById(R.id.tvPower);
+
                     // Add the inflated item layout to the main layout
                     mainLayout.addView(itemLayout);
+
+
+                    sensorRef.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            Integer temperature = snapshot.child("temperature").getValue(Integer.class);
+                            Integer humidity = snapshot.child("humidity").getValue(Integer.class);
+                            Integer power = snapshot.child("power").getValue(Integer.class);
+
+                            // Set the values to your TextViews
+                            tvTemperature.setText(temperature.toString() + " °C");
+                            tvHumidity.setText(humidity.toString() + " %");
+                            tvPower.setText(power.toString() + " kW");
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
 
                     itemLayout.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -75,6 +101,8 @@ public class HomePage extends AppCompatActivity {
                             redirectActivity(RoomStatusPage.class);
                         }
                     });
+
+
                 }
             }
 

@@ -194,13 +194,14 @@
                         />
                 </LinearLayout>
 
-                <ImageView
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
-                    android:paddingHorizontal="24dp"
-                    android:src="@drawable/line"
+                    android:layout_height="2dp"
+                    android:layout_marginHorizontal="24dp"
 
-                    app:tint="#DDDDDD" />
+                    android:background="@color/primary"
+                    android:backgroundTint="#DDDDDD" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -245,13 +246,13 @@
                         app:tint="@color/grayElements" />
                 </LinearLayout>
 
-                <ImageView
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
-                    android:paddingHorizontal="24dp"
-                    android:src="@drawable/line"
+                    android:layout_height="2dp"
+                    android:layout_marginHorizontal="24dp"
 
-                    app:tint="#DDDDDD" />
+                    android:background="@color/primary"
+                    android:backgroundTint="#DDDDDD" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -296,13 +297,13 @@
                         app:tint="@color/grayElements" />
                 </LinearLayout>
 
-                <ImageView
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
-                    android:paddingHorizontal="24dp"
-                    android:src="@drawable/line"
+                    android:layout_height="2dp"
+                    android:layout_marginHorizontal="24dp"
 
-                    app:tint="#DDDDDD" />
+                    android:background="@color/primary"
+                    android:backgroundTint="#DDDDDD" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
