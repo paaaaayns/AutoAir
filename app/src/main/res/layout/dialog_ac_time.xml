@@ -15,13 +15,13 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <ImageView
+        <View
             android:layout_width="50dp"
-            android:layout_height="5dp"
+            android:layout_height="2dp"
             android:layout_marginVertical="16dp"
 
-            android:src="@drawable/line"
-            app:tint="@color/primary" />
+            android:background="@color/primary"
+            android:backgroundTint="@color/primary" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,13 +33,14 @@
             android:textSize="20dp" />
 
 
-        <ImageView
+        <View
             android:layout_width="match_parent"
-            android:layout_height="5dp"
+            android:layout_height="2dp"
             android:layout_marginHorizontal="16dp"
             android:layout_marginBottom="16dp"
-            android:src="@drawable/line"
-            app:tint="@color/primary" />
+
+            android:background="@color/primary"
+            android:backgroundTint="@color/primary" />
 
 
         <TextView
@@ -65,16 +66,15 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="8dp"
                 android:layout_weight="1"
-                app:cardCornerRadius="8dp"
-                android:backgroundTint="@color/primary">
+                android:backgroundTint="@color/primary"
+                app:cardCornerRadius="8dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    >
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -83,8 +83,8 @@
 
                         android:fontFamily="@font/quicksand_semibold"
                         android:text="Start"
-                        android:textColor="@color/white"
                         android:textAlignment="center"
+                        android:textColor="@color/white"
                         android:textSize="16dp" />
 
                     <LinearLayout
@@ -94,17 +94,17 @@
 
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            app:boxBackgroundColor="@color/white"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            app:boxBackgroundColor="@color/white">
 
                             <AutoCompleteTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:padding="17dp"
-
                                 android:fontFamily="@font/quicksand_semibold"
+
                                 android:inputType="time"
+                                android:padding="17dp"
                                 android:text="08:00 PM"
                                 android:textAlignment="center"
                                 android:textSize="16dp" />
@@ -128,8 +128,8 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="16dp"
                 android:layout_weight="1"
-                app:cardCornerRadius="8dp"
-                android:backgroundTint="@color/primary">
+                android:backgroundTint="@color/primary"
+                app:cardCornerRadius="8dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -148,23 +148,23 @@
 
                         android:fontFamily="@font/quicksand_semibold"
                         android:text="End"
-                        android:textColor="@color/white"
                         android:textAlignment="center"
+                        android:textColor="@color/white"
                         android:textSize="16dp" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        app:boxBackgroundColor="@color/white"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundColor="@color/white">
 
                         <AutoCompleteTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="17dp"
-
                             android:fontFamily="@font/quicksand_semibold"
+
                             android:inputType="time"
+                            android:padding="17dp"
                             android:text="08:00 PM"
                             android:textAlignment="center"
                             android:textSize="16dp" />
