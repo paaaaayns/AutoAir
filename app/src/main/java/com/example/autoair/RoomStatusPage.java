@@ -57,6 +57,7 @@ public class RoomStatusPage extends AppCompatActivity {
         sensorRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                // Retrieve sensor values
                 Integer temperature = snapshot.child("temperature").getValue(Integer.class);
                 Integer humidity = snapshot.child("humidity").getValue(Integer.class);
                 Integer power = snapshot.child("power").getValue(Integer.class);
@@ -83,10 +84,10 @@ public class RoomStatusPage extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    // Get key of the snapshot
+                    // Retrieve key of the snapshot
                     String applianceKey = snapshot.getKey().toString();
 
-                    // Get the values of the snapshot
+                    // Retrieve the values of the snapshot
                     String appliance_name = snapshot.child("appliance_name").getValue(String.class);
                     String appliance_on_sched = snapshot.child("appliance_on_sched").getValue(String.class);
                     String appliance_off_sched = snapshot.child("appliance_off_sched").getValue(String.class);
