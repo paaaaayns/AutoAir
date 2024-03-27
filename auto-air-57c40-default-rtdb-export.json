@@ -1,0 +1,116 @@
+{
+  "company": {
+    "CSC": {
+      "floors": {
+        "01": {
+          "appliances": {
+            "01": {
+              "appliance_name": "Aircon 1",
+              "appliance_off_sched": "20:00",
+              "appliance_on_sched": "8:00",
+              "appliance_power_status": false
+            },
+            "02": {
+              "appliance_name": "Aircon 2",
+              "appliance_off_sched": "20:00",
+              "appliance_on_sched": "8:00",
+              "appliance_power_status": false
+            },
+            "03": {
+              "appliance_name": "Aircon 3",
+              "appliance_off_sched": "20:00",
+              "appliance_on_sched": "8:00",
+              "appliance_power_status": false
+            },
+            "04": {
+              "appliance_name": "Aircon 4",
+              "appliance_off_sched": "20:00",
+              "appliance_on_sched": "8:00",
+              "appliance_power_status": false
+            }
+          },
+          "name": "1st Floor",
+          "sensors": {
+            "humidity": 0,
+            "power": 0,
+            "temperature": 0
+          }
+        },
+        "02": {
+          "appliances": {
+            "01": {
+              "appliance_name": "Aircon 1",
+              "appliance_off_sched": "20:00",
+              "appliance_on_sched": "8:00",
+              "appliance_power_status": false
+            },
+            "02": {
+              "appliance_name": "Aircon 2",
+              "appliance_off_sched": "20:00",
+              "appliance_on_sched": "8:00",
+              "appliance_power_status": false
+            },
+            "03": {
+              "appliance_name": "Aircon 3",
+              "appliance_off_sched": "20:00",
+              "appliance_on_sched": "8:00",
+              "appliance_power_status": false
+            },
+            "04": {
+              "appliance_name": "Aircon 4",
+              "appliance_off_sched": "20:00",
+              "appliance_on_sched": "8:00",
+              "appliance_power_status": false
+            }
+          },
+          "name": "2nd Floor",
+          "sensors": {
+            "humidity": 0,
+            "power": 0,
+            "temperature": 0
+          }
+        },
+        "03": {
+          "appliances": {
+            "01": {
+              "appliance_name": "Aircon 1",
+              "appliance_off_sched": "20:00",
+              "appliance_on_sched": "8:00",
+              "appliance_power_status": false
+            },
+            "02": {
+              "appliance_name": "Aircon 2",
+              "appliance_off_sched": "20:00",
+              "appliance_on_sched": "8:00",
+              "appliance_power_status": false
+            },
+            "03": {
+              "appliance_name": "Aircon 3",
+              "appliance_off_sched": "20:00",
+              "appliance_on_sched": "8:00",
+              "appliance_power_status": false
+            },
+            "04": {
+              "appliance_name": "Aircon 4",
+              "appliance_off_sched": "20:00",
+              "appliance_on_sched": "8:00",
+              "appliance_power_status": false
+            }
+          },
+          "name": "3rd Floor",
+          "sensors": {
+            "humidity": 0,
+            "power": 0,
+            "temperature": 0
+          }
+        }
+      }
+    }
+  },
+  "users": {
+    "admin": {
+      "password": "admin",
+      "username": "admin"
+    }
+  }
+}
